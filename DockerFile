@@ -4,5 +4,5 @@ ENV JAVA_OPTS=$MEM_OPTS" -Doracle.jdbc.timezoneAsRegion=false -Doracle.jdbc.thin
 COPY /build/libs/* app.jar
 RUN useradd --no-log-init -r bb -u 1000
 USER 1000
-EXPOSE 8080
+EXPOSE 8081
 ENTRYPOINT ["java","-jar","/app.jar"]
